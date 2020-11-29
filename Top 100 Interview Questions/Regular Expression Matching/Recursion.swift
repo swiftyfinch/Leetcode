@@ -1,5 +1,4 @@
 // Recursion
-// TODO: Use dynamic programming
 final class Solution {
     func isMatch(_ s: String, _ p: String) -> Bool {
         isMatch(s[...], p[...])
