@@ -13,7 +13,8 @@ If no valid conversion could be performed, a zero value is returned.
 ##### Note:
 
 * Only the space character `' '` is considered a whitespace character.
-* Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: `[−2³¹,  2³¹ − 1]`. If the numerical value is out of the range of representable values, `2³¹ − 1` or `−2³¹` is returned.
+* Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range:\
+`[−2³¹,  2³¹ − 1]`. If the numerical value is out of the range of representable values, `2³¹ − 1` or `−2³¹` is returned.
 
 ##### Example 1:
 
@@ -27,7 +28,8 @@ Output: 42
 ```
 Input: str = "   -42"
 Output: -42
-Explanation: The first non-whitespace character is '-', which is the minus sign. Then take as many numerical digits as possible, which gets 42.
+Explanation: The first non-whitespace character is '-', which is the minus sign.
+Then take as many numerical digits as possible, which gets 42.
 ```
 
 ##### Example 3:
@@ -43,7 +45,8 @@ Explanation: Conversion stops at digit '3' as the next character is not a numeri
 ```
 Input: str = "words and 987"
 Output: 0
-Explanation: The first non-whitespace character is 'w', which is not a numerical digit or a +/- sign. Therefore no valid conversion could be performed.
+Explanation: The first non-whitespace character is 'w', which is not a numerical digit or a +/- sign.
+Therefore no valid conversion could be performed.
 ```
 
 ##### Example 5:
@@ -51,7 +54,8 @@ Explanation: The first non-whitespace character is 'w', which is not a numerical
 ```
 Input: str = "-91283472332"
 Output: -2147483648
-Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer. Thefore INT_MIN (−2³¹) is returned.
+Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer.
+Thefore INT_MIN (−2³¹) is returned.
 ```
 
 ##### Constraints:
